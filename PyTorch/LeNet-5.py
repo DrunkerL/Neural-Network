@@ -14,10 +14,10 @@ class LeNet5(nn.Module):
         self.model = nn.Sequential(
             nn.Conv2d(1,6,5,1,0),
             nn.ReLU(),
-            nn.MaxPool2d(2,2),
+            nn.AvgPool2d(2,2),
             nn.Conv2d(6,16,5,1,0),
             nn.ReLU(),
-            nn.MaxPool2d(2,2),
+            nn.AvgPool2d(2,2),
             nn.Flatten(),
             nn.Linear(16*4*4,120),
             nn.ReLU(),
